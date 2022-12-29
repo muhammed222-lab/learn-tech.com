@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Ios Web Application</title>
+            <link rel="stylesheet" href="Ios.css">
+
+</head>
+<body>
+
+<header>
+<div class="sideMenu">
+   <div class="menuBtn" id="sideMenuBtn">
+       <span> ➖ </span>   
+       <span> ➖ </span>   
+       <span> ➖ </span>   
+   </div>
+   <h1 class="learnTech">Learn Tech</h1>       
+</div>
+<div class="showToggleActioBtn">
+    <div class="actintBtn" id="actiontBtn1">⚠</div>
+    <div class="actintBtn" id="actiontBtn2">❔</div>
+    <div class="actintBtn" id="actiontBtn3">💬</div>
+    <div class="actintBtn" id="actiontBtn4">💳</div>
+</div>
+<div class="viewAsContainer">
+          <h3>View As:</h3>
+          <select name="view" id="view" class="viewAsSellect">
+                    <option value=" high">Sofware Developer</option>
+                    <option value="high">Hacking</option>
+                    <option value="high">Ui/Ux Developer</option>
+                    <option value="high">Data Scientist</option>
+                    <option value="high">Project Manager</option>
+                    <option value="high">Java</option>
+                    <option value="high">Cybar Security</option>
+                    <option value="high">Javascript</option>
+                    <option value="high"> Php</option>
+                    <option value="high">SQL</option>
+                    <option value="high">Python</option>
+                    <option value="high">React/Redux</option>
+                    <option value="high">Html/Css</option>
+                    <option value="high">Infomation Scientist</option>
+                    <option value="high">All Computer Skill</option>
+          </select>
+</div>
+</header>
+
+<div class="sideBarBox" id="sideBarBox">
+<h2 class="sideLearnTech">Learn Tech</h2>
+    <div class="showUserData">
+        <img src="aug.jpg" alt="profile image" id="profileImageImg">
+        <span id="userNickName">unknown</span>
+        <label for="fileChooseBtn">Add Image </label>
+        <input type="file" id="fileChooseBtn" hidden>
+        <div class="capacity">
+            <span class="rank">Rank:0</span>
+            <span class="tier">Tier:0</span>
+        </div>
+
+        <a href="#">↪Log Out</a>
+        <a href="#">♻Account Setting</a>
+        
+    </div>
+        
+    <div id="theLinkBox" class="theLinkBox"></div>
+</div>
+
+<!-- the icon for searching --> 
+<div class="searchIcon" id="searchIcon">
+    <span class="searchIconText">
+        <span class="row">◻◻</span>
+        <span class="row">◻◻</span>
+    </span>
+</div>
+
+<!-- the searching suggestion box-->
+
+<div class="searchBoxContent" id="searchBoxContent">
+    <div class="inputSec">
+        <input type="search" name="search" id="searchInput" class="searchInput" placeholder="Search......">
+    </div>
+    <div id="theSugestion"></div>
+</div>
+
+<div class="actionPanelContainer" id="actionPanelContainer">
+    <span id="closeSidePannel" class="closeSidePannel">✖</span>
+    <div class="actionPanelHeader"></div>
+    <div class="actionPannel" id="actionPannel">
+
+    </div>
+</div>
+
+
+<div class="navSelectionBar" id="navSelectionBar">
+    <div class="selectionBar">
+
+        <div class="barRound Zero" id="homeButton">
+            <img src="gif.gif" alt="">
+            <div class="abtBarTx">
+                <h3>Home</h3>
+                <a href="#">100+ Course</a>
+            </div>
+        </div>
+
+        <div class="barRound One" id="communityButton">
+            <img src="gif.gif" alt="">
+            <div class="abtBarTx">
+                <h3>Join Community</h3>
+                <a href="#">300M members</a>
+            </div>
+        </div>
+
+        <div class="barRound Two" id="progress">
+            <img src="companyNameLogo.gif" alt="">
+            <div class="abtBarTx">
+                <h3>Progress</h3>
+                <a href="#">Level Vc</a>
+            </div>
+        </div>
+
+        <div class="barRound Three" id="dashboard">
+            <img src="webApp.png" alt="">
+            <div class="abtBarTx">
+                <h3>DashBoard</h3>
+                <a href="#">80% High</a>
+            </div>
+        </div>
+
+        <div class="barRound Four" id="recommend">
+            <img src="gif.gif" alt="">
+            <div class="abtBarTx">
+                <h3>Recomended</h3>
+                <a href="#">Javascript</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="boxRenderContainerForAll">
+    <div class="renderAppendBoxForAll" id="renderAppendBoxForAll"></div>
+
+    <div class="homeRenderForAllHomeEle hide" id="homeRenderForAllHomeEle">
+        
+    </div>
+
+    <div class="programmeRenderLocation hide" id="programmeRenderLocation">PROGRESS
+        <div class="showCoursProject" id="showCoursProject"></div>
+    </div>
+
+    <div class="dashBoardRenderLocation hide" id="dashBoardRenderLocation">DASHBOARD
+        <div class="dashBoardConsBox">
+            <canvas id="dashBoardCanvas" width="100%" height="500">  </canvas>
+        </div>
+    </div>
+
+    <div class="recommendedRenderLocation hide" id="recommendedRenderLocation">RECOMMEND
+        <div class="recoBox" id="recoBox">
+            
+        </div>
+    </div>
+</div>
+
+<!-- profile Dadasssssssssssssssssssssssssssssss -->
+<div class="boxLargeAbtProfile" id="boxLargeAbtProfile">
+    <div class="abtDatas">
+        <div class="imgCox">
+        <img src="" alt="" id="inAppImg" class="inAppImg">
+        </div>
+      <div class="txtCon">
+        <h1 id="nameData"></h1>
+        <h2 id="workData"></h2>
+        <h2 id="conty"></h2>
+        
+        <div class="post">
+            <span id="rank"></span>
+            <span id="tier"></span>
+        </div>
+        <div class="followersB" id="followersB">
+            <!-- <h2 id="follower">Follow</h2>
+            <h2 id="following">Connect</h2> -->
+        </div>
+      </div>
+    </div>
+
+    <h1 id="cancel" class="cancel">↩</h1>
+</div>
+<!-- endingsssssssssssssssssssssssssssssssssssss -->
+
+<!-- the read popUp is Located Here  -->
+<div class="confirmRead" id="confirmRead">
+    <h2>Unlock Course For Free</h2>
+    <div class="theConfirmAllPopUp">
+        <img src="" id="readImg">
+        <h2 id="theConfirmAllPopUpText"></h2>
+        <p>Activate Course To View More Option</p>
+        <p>Need Explanation <a href="#">Help Me??</a></p>
+    </div>
+    <button id="cancelCourse" class="actionDecoForCourseConfirm">Cancel</button>
+    <button id="unlockCourse" class="actionDecoForCourseConfirm" onclick="openFireLoginAttemp()">Unlock</button>
+</div>
+
+
+
+<div class="sayYouAreNotAuthorized" id="sayYouAreNotAuthorized">
+    <h2 class="attentionText"><span class="attentionIcon">⚠</span> Attention‼</h2>
+    <h4 class="moreText">Your Are Not Signed In </h4>
+    <h4 class="moreText">You Dont Have An Account</h4>
+    <p>Login If You Have An Account <a href="#">Recover Account?</a></p>
+    <div class="buttons">
+        <button class="CreateAccount" onclick="createAcc()">Sign Up</button>
+        <button class="login" onclick="showPromptToPin(10,70000000000)">Login</button>
+        <button class="laterBtn" id="closeYouAreNotAuthorized">Close</button>
+    </div>
+</div>
+
+<div class="showWenUserClickCreateAccountBtn" id="showWenUserClickCreateAccountBtn">
+    <h2 class="closeRegistration" onclick="close_reg()">Cancel</h2>
+    <div class="RegistrationFieldBox">
+        <h2 class="Register">Create An Account</h2>
+        <h3 class="joinTxts">Join <span class="hundred">100+</span>Learners</h3>
+        <div class="theFormContainer">
+            <form action="#" method="post" class="forms" id="forms">
+                <label for="UserName">
+                    Enter UserName
+                    <input type="text" name="name" id="UserName" placeholder="username" required maxlength="20">
+                </label>
+
+                <label for="Email">
+                    Enter Email
+                    <input type="gmail" name="name" id="Email" placeholder="Email" required >
+                </label>
+
+                <label for="Password1">
+                    Enter Password
+                    <input type="password" name="password" id="Password1" autocomplete="on" placeholder="Password" required maxlength="15">
+                </label>
+
+                <label for="Password2">
+                    ReEnter Password
+                    <input type="password" name="password" id="Password2" autocomplete="on" placeholder="Password" required maxlength="15">
+                </label>
+                <span class="recog">
+                    <input type="checkbox" name="check" id="chek">
+                    <span>Remember This Login Infomation</span>
+                </span>
+                <input type="submit" value="SignUp Now" class="signUpNow" id="signUpNow" onclick="validataInputs()">
+            </form>
+            <div class="pleaseWait" id="pleaseWait">
+                <h1 onclick="closeOtp()">✖</h1>
+                
+                <p id="theOtp"></p>
+                <button id="getOtp" onclick="getRandomNumber(1, 9900000000000000000000000)">
+                    Generate Your OTP
+                </button> <span id="copyCode" onclick="copyCode()">📋Copy</span><br>
+                <small>Copy The Code For later</small>
+            </div>
+        </div>
+        <!--  -->
+    </div>
+</div>
+
+<!-- form scrip is here on condition -->
+<script>
+
+    function copyCode(){
+        let toCopy_Text = document.getElementById('theOtp');
+        let copyCode = document.getElementById('copyCode');
+        navigator.clipboard.writeText(toCopy_Text.textContent);
+        copyCode.innerText = '📋Copied';
+    }
+
+    let userName = document.getElementById('UserName').value;
+
+    function validataInputs(){
+    let userName = document.getElementById('UserName').value;
+    let userGmail = document.getElementById('Email').value;
+    let userPass1 = document.getElementById('Password1').value;
+    let userPass2 = document.getElementById('Password2').value;
+    let pleaseWait = document.getElementById('pleaseWait');
+    let userNickName = document.getElementById('userNickName').innerText = userName.toUpperCase();
+    var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+        if(userName == '' || userGmail == '' || userPass1 == '' || userPass2 == ''){
+            alert('You did Not fill the Form, Or You Left Some, Kindly Go Back To Do So!')
+            pleaseWait.style.display = 'none';
+            return false 
+        }if(userPass1 != userPass2){
+            alert('Password does not match')
+            pleaseWait.style.display = 'none';
+            return false 
+        }if(userName == Number){
+            alert('User Name Cannot Be a Number')
+            pleaseWait.style.display = 'none';
+            return false 
+        }if(userPass1.length < 10 || userPass2.length < 10){
+            alert('Password is less than 10, please enter a strong password!')
+            pleaseWait.style.display = 'none';
+            return false 
+        }if(userName.length < 5 || userName == null){
+            alert('User Name Too Short')
+            return false
+        }else{
+             pleaseWait.style.display = 'block';
+             alert('make sure you copy the Code')
+             return true
+    document.getElementById('userNickName').innerText = userName.toUpperCase()
+
+         }
+         if (userGmail.match(pattern)) {
+             alert('make sure you copy the Code')
+             return true
+             document.getElementById('userNickName').innerText = userName.toUpperCase()
+        }else{
+            alert('Email is very Correct');
+        }
+
+    }
+
+    
+   
+    
+
+function showPromptToPin(min,max) {
+    let pleaseWait = document.getElementById('pleaseWait'); 
+ let calCulatePropmt =  Math.floor(Math.random() * (max - min + 1)) + min;
+ let usN = prompt('Enter User Name')
+ if(usN != ''){
+     alert(calCulatePropmt)
+     let checkPin = prompt('Enter The Given Confirmation Pin To Continue ' + calCulatePropmt);
+     if (checkPin == '') {
+         alert('You Have To Enter Your Confirmation Code!')
+     }
+     if (checkPin != calCulatePropmt) {
+         alert('You Enter A fake Or Wrong Code')
+     } if (checkPin == calCulatePropmt) {
+
+         pleaseWait.style.display = 'none';
+         alert('Code Correct "Login Succesfull, Remain one more Step To Go"');
+     }
+ }else{
+    alert('you dont Enter Any USER NAME Or is Incorrect')
+ }
+
+
+}
+</script>
+
+<!-- is closed here -->
+
+
+
+<script src="IosApp.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
